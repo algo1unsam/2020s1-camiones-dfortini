@@ -1,0 +1,27 @@
+import camion.*
+import cosas.*
+
+describe "camion y cargas" {
+	fixture {
+		camion.cargar(knightRider)
+		camion.cargar(bumblebee)	
+		embalajeSeguridad.cosaEmbalada(bumblebee)
+	}
+	
+	test "test carga de un camion es par" {	
+		assert.that(camion.todoPesoEsPar())
+	}
+	
+	test "test camion tiene cosa que pesa 500" {
+		assert.that(camion.hayAlgunoQuePesa(500))
+	}
+	
+	test "test objetos con peligrosidad mayor a knightRider" {
+		assert.that(camion.objetosMasPeligrososQue(knightRider).size() == 1)
+		assert.that(camion.objetosMasPeligrososQue(knightRider) == [bumblebee])
+	}
+	
+	test "" {
+		
+	}
+}
