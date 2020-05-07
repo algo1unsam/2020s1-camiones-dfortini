@@ -1,6 +1,8 @@
 import camion.*
 import cosas.*
 
+const bumblebee = new Transformer()
+
 describe "camion y cargas" {
 	fixture {
 		camion.cargar(knightRider)
@@ -19,9 +21,5 @@ describe "camion y cargas" {
 	test "test objetos con peligrosidad mayor a knightRider" {
 		assert.that(camion.objetosMasPeligrososQue(knightRider).size() == 1)
 		assert.that(camion.objetosMasPeligrososQue(knightRider) == [bumblebee])
-	}
-	
-	test "" {
-		
 	}
 }

@@ -12,7 +12,7 @@ object knightRider {
 
 }
 
-object bumblebee {
+class Transformer {
 
 	var transformadoEnAuto = true
 
@@ -35,6 +35,24 @@ object bumblebee {
 	method pesoEsPar() = self.peso().even()
 
 }
+
+
+
+class PaqueteLadrillos {
+	const cantidad = 10
+
+	method peso() {
+		return 2 * cantidad
+	}
+
+	method nivelPeligrosidad() {
+		return 2
+	}
+}
+
+
+
+
 
 object embalajeSeguridad {
 
